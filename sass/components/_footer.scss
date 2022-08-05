@@ -153,6 +153,10 @@
     color: var(--footer-input-color);
     background-color: transparent;
 
+    @media screen and (max-width: 479px) {
+width: 250px;
+        }
+
 &:focus {
         border-color: var(--accent-color);
     }

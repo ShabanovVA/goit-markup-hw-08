@@ -20,7 +20,7 @@
     
         &__card {
             // padding: 30px 32px;
-            padding: 30px 124px 24px 124px;
+            padding: 30px 0 24px 0;
             text-align: center;
         }
     
@@ -43,7 +43,8 @@
         }
     
         &__networks {
-            display: flex;
+            // display: flex;
+            display: inline-flex;
             gap: 10px;
         }
     

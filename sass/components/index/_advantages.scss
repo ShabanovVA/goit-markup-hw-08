@@ -20,6 +20,7 @@
     }
 
     &__title {
+        // display: inline-block;
         color: var(--title-text-color);
 
         font-weight: 700;
@@ -29,7 +30,6 @@
         letter-spacing: 0.03em;
 
         margin-bottom: 10px;
-        align-items: center;
         text-align: center;
     }
 

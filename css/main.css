@@ -324,7 +324,6 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
-  align-items: center;
   text-align: center;
 }
 .advantages__description {
@@ -382,7 +381,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .cooperators__card {
-  padding: 30px 124px 24px 124px;
+  padding: 30px 0 24px 0;
   text-align: center;
 }
 .cooperators__name {
@@ -401,7 +400,7 @@ img {
   margin-bottom: 16px;
 }
 .cooperators__networks {
-  display: flex;
+  display: inline-flex;
   gap: 10px;
 }
 .cooperators__link {
@@ -425,6 +424,11 @@ img {
   flex-wrap: wrap;
   margin-top: 30px;
   gap: 30px;
+}
+@media screen and (max-width: 479px) {
+  .clients__list {
+    justify-content: center;
+  }
 }
 .clients__link {
   display: flex;
@@ -883,6 +887,11 @@ img {
   transition: button-color var(--primary-transition-time) var(--primary-cubic-bezier);
   color: var(--footer-input-color);
   background-color: transparent;
+}
+@media screen and (max-width: 479px) {
+  .footer__subscribe-input {
+    width: 250px;
+  }
 }
 .footer__subscribe-input:focus {
   border-color: var(--accent-color);
