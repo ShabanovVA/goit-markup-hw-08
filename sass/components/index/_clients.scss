@@ -1,13 +1,14 @@
 .clients {
    &__list {
         display: flex;
-        margin-top: 50px;
+        flex-wrap: wrap;
+        margin-top: 30px;
         gap: 30px;
     }
 
     &__link {
         display: flex;
-        width: 170px;
+        width: 210px;
         height: 92px;
 
         border: 1px solid var(--clients-border-color);

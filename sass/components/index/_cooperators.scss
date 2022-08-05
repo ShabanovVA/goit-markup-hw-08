@@ -1,12 +1,15 @@
 .cooperators {
     background-color: var(--cooperators-bgc);
+    
     &__title {
-            margin-bottom: 50px;
+            // margin-bottom: 50px;
+            margin-bottom: 30px;
         }
     
         &__list {
             display: flex;
             gap: 30px;
+            flex-wrap: wrap;
         }
     
         &__item {
@@ -16,7 +19,8 @@
         }
     
         &__card {
-            padding: 30px 32px;
+            // padding: 30px 32px;
+            padding: 30px 124px 24px 124px;
             text-align: center;
         }
     
@@ -25,7 +29,7 @@
     
             font-weight: 500;
             font-size: 16px;
-            line-height: 1.9;
+            line-height: 1.19;
             letter-spacing: 0.03em;
             margin-bottom: 10px;
         }

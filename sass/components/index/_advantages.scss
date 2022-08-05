@@ -1,6 +1,7 @@
 .advantages {
 &__list {
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
     }
 
@@ -28,6 +29,8 @@
         letter-spacing: 0.03em;
 
         margin-bottom: 10px;
+        align-items: center;
+        text-align: center;
     }
 
         &__description {

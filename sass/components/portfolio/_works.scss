@@ -3,16 +3,17 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+        
     }
 
     &__works-item {
         flex-basis: calc((100% - 2 * 30px) / 3);
+        
     }
 
     &__link-card {
         display: block;
         text-decoration: none;
-
         transition: box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
     }
 
@@ -23,6 +24,7 @@
 &__link-card:hover,
 &__link-card:focus {
     box-shadow: var(--portfolio-card-hover-shadow);
+    
     
 }
 

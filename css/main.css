@@ -75,19 +75,34 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .button {
@@ -108,7 +123,7 @@ img {
 .section-title {
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
@@ -240,7 +255,7 @@ img {
 
 .hero {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--bgc-hero-footer-color);
@@ -249,23 +264,26 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0;
 }
 .hero__container {
-  width: 696px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .hero__container {
+    max-width: 360px;
+  }
 }
 .hero__title {
   color: var(--main-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-
-.hero__button {
+.hero .hero__button {
   padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
@@ -276,13 +294,14 @@ img {
   background-color: var(--accent-color);
   transition: color var(--primary-transition-time) var(--primary-cubic-bezier), color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
-.hero__button:hover, .hero__button:focus {
+.hero .hero__button:hover, .hero .hero__button:focus {
   color: var(--main-white-color);
   background-color: var(--btn-hero-color);
 }
 
 .advantages__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .advantages__icon {
@@ -305,6 +324,8 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
 }
 .advantages__description {
   font-weight: 400;
@@ -348,11 +369,12 @@ img {
   background-color: var(--cooperators-bgc);
 }
 .cooperators__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .cooperators__list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 .cooperators__item {
   background-color: var(--main-white-color);
@@ -360,14 +382,14 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .cooperators__card {
-  padding: 30px 32px;
+  padding: 30px 124px 24px 124px;
   text-align: center;
 }
 .cooperators__name {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
@@ -400,12 +422,13 @@ img {
 
 .clients__list {
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  margin-top: 30px;
   gap: 30px;
 }
 .clients__link {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid var(--clients-border-color);
   border-radius: 4px;
@@ -436,7 +459,7 @@ img {
 .modal {
   position: absolute;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   top: 50%;
   left: 50%;
   padding: 40px;
@@ -734,17 +757,18 @@ img {
 }
 
 .footer {
+  height: 603px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bgc-hero-footer-color);
 }
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  display: block;
+  text-align: center;
 }
 .footer__address-list {
   display: block;
-  width: 231px;
+  margin-bottom: 60px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -758,8 +782,8 @@ img {
   display: block;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
   margin-bottom: 20px;
   color: var(--main-white-color);
@@ -770,12 +794,13 @@ img {
 }
 
 .footer__address-item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .footer__address-item--grey,
 .footer__address-item--grey {
   color: var(--address-footer-color);
+  text-decoration: none;
   transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 .footer__address-item--grey:hover, .footer__address-item--grey:focus,
@@ -785,8 +810,8 @@ img {
 }
 
 .footer__networks {
-  margin-left: 70px;
   height: 80px;
+  margin-bottom: 60px;
 }
 .footer__networks-title {
   margin-bottom: 20px;
@@ -800,6 +825,7 @@ img {
 .footer__networks-list {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .footer__networks-login {
@@ -824,12 +850,11 @@ img {
   width: 24px;
   height: 24px;
   margin-left: 10px;
+  text-align: center;
 }
 .footer__subscribe-form {
-  display: flex;
-  width: 570px;
+  width: 100%;
   height: 50px;
-  align-items: flex-end;
 }
 .footer__subscribe-label {
   margin-bottom: 20px;
@@ -842,9 +867,10 @@ img {
 }
 
 .footer__subscribe-input {
-  display: block;
+  display: inline-block;
   width: 358px;
   padding: 14px 16px 14px 16px;
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -863,15 +889,13 @@ img {
 }
 
 .footer__subscribe-button {
-  display: flex;
-  margin-left: 12px;
+  display: inline-flex;
   padding: 9px 28px 9px 29px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   align-items: center;
-  justify-content: center;
   border-radius: 4px;
   border: 1px solid transparent;
   color: var(--main-white-color);
