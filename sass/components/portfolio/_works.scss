@@ -1,13 +1,29 @@
 .portfolio {
-&__works-list {
+    &__works-list {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        
+        margin-top: 40px;
+        justify-content: center;
+    
+        @media screen and (min-width: 768px) {
+        margin-top: 30px;
+        justify-content: left;
+        }
+    
+        @media screen and (min-width: 1200px) {
+        margin-top: 50px;
+        }
     }
 
     &__works-item {
-        flex-basis: calc((100% - 2 * 30px) / 3);
+        @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    }
+        
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+    }
         
     }
 
@@ -35,6 +51,10 @@
     border-width: 0 1px 1px;
     border-style: solid;
     border-color: var(--border-works-color);
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 20px 24px 56px 24px;
+}
 }
 
 &__card-title {
@@ -62,12 +82,12 @@
 .portfolio__card-text {
     position: absolute;
     display: block;
+    padding: 77px 24px;
 
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    padding: 63px 24px;
+    height: 100%;;
 
     font-style: normal;
     font-weight: 400;
@@ -80,6 +100,14 @@
 
     color: var(--main-white-color);
     background-color: var(--portfolio-card-bgc);
+
+@media screen and (min-width: 768px) {
+    padding: 49px 24px 77px 24px;
+}
+        
+@media screen and (min-width: 1200px) {
+    padding: 49px 24px;
+}
 
 .portfolio__link-card:hover &,
     .portfolio__link-card:focus & {

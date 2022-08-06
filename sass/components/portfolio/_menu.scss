@@ -1,15 +1,22 @@
 .portfolio__menu {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
     gap: 8px;
+
+    @media screen and (min-width: 480px) {
+    justify-content: center;
+    }
+
+    @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    }
 
     &-button {
         padding: 6px 22px;
 
         transition: color var(--primary-transition-time) var(--primary-cubic-bezier),
-            background-color var(--primary-transition-time) var(--primary-cubic-bezier),
-            box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
+        background-color var(--primary-transition-time) var(--primary-cubic-bezier),
+        box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
         color: var(--title-text-color);
         background-color: var(--btn-grey-color);
     }

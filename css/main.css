@@ -81,7 +81,7 @@ img {
 .section {
   padding: 60px 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding: 94px 0;
   }
@@ -759,9 +759,18 @@ img {
 
 .portfolio__menu {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
   gap: 8px;
+}
+@media screen and (min-width: 480px) {
+  .portfolio__menu {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__menu {
+    flex-wrap: nowrap;
+  }
 }
 .portfolio__menu-button {
   padding: 6px 22px;
@@ -783,9 +792,29 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
 }
-.portfolio__works-item {
-  flex-basis: calc((100% - 60px) / 3);
+@media screen and (min-width: 768px) {
+  .portfolio__works-list {
+    margin-top: 30px;
+    justify-content: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__works-list {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__works-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__works-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .portfolio__link-card {
   display: block;
@@ -805,6 +834,11 @@ img {
   border-width: 0 1px 1px;
   border-style: solid;
   border-color: var(--border-works-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__card-description {
+    padding: 20px 24px 56px 24px;
+  }
 }
 .portfolio__card-title {
   margin-bottom: 4px;
@@ -826,11 +860,11 @@ img {
 .portfolio__card-text {
   position: absolute;
   display: block;
+  padding: 77px 24px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -841,6 +875,16 @@ img {
   color: var(--main-white-color);
   background-color: var(--portfolio-card-bgc);
 }
+@media screen and (min-width: 768px) {
+  .portfolio__card-text {
+    padding: 49px 24px 77px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__card-text {
+    padding: 49px 24px;
+  }
+}
 .portfolio__link-card:hover .portfolio__card-text, .portfolio__link-card:focus .portfolio__card-text {
   transform: translateY(0);
 }
@@ -850,6 +894,16 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bgc-hero-footer-color);
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 463px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    height: 252px;
+  }
 }
 .footer__container {
   text-align: center;
@@ -862,6 +916,14 @@ img {
     justify-content: center;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    text-align: start;
+  }
+}
 .footer__address-list {
   display: block;
   margin-bottom: 60px;
@@ -872,6 +934,11 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--main-white-color);
+}
+@media screen and (min-width: 1200px) {
+  .footer__address-list {
+    margin-bottom: 0;
+  }
 }
 
 .footer__link {
@@ -909,10 +976,16 @@ img {
   height: 80px;
   margin-bottom: 60px;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__networks {
     margin-left: 165px;
     margin-bottom: 102px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__networks {
+    margin-left: 70px;
+    margin-bottom: 0;
   }
 }
 .footer__networks-title {
@@ -963,7 +1036,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer__subscribe-form {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     justify-content: center;
   }
 }
@@ -1023,6 +1096,11 @@ img {
   color: var(--main-white-color);
   background-color: var(--accent-color);
   transition: background-color var(--primary-transition-time) var(--primary-cubic-bezier), box-shadow var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+@media screen and (min-width: 1200px) {
+  .footer__subscribe-button {
+    margin-left: 12px;
+  }
 }
 .footer__subscribe-button:hover, .footer__subscribe-button:focus {
   background-color: var(--btn-hero-color);
