@@ -133,7 +133,8 @@
 .footer__subscribe-input {
     // display: block;
     display: inline-block;
-    width: 358px;
+    width: 100%;
+    max-width: 358px;
     padding: 14px 16px 14px 16px;
     margin-bottom: 20px;
 
@@ -153,8 +154,8 @@
     color: var(--footer-input-color);
     background-color: transparent;
 
-    @media screen and (max-width: 479px) {
-width: 250px;
+    @media screen and (min-width: 480px) {
+    width: 358px;
         }
 
 &:focus {
