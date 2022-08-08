@@ -17,19 +17,25 @@
 
 <body class="body">
   <!-- Шапка -->
-  <!-- <header class="header">
+  <header class="header">
     <div class="header__container container ">
       <nav class="header__navigation">
         <a lang="en" href="./index.html" class="header__logo"><span class="logo__forepart">Web</span>Studio</a>
-        <ul class="header__menu">
+        <button type="button" class="header__mobile-menu is-open" aria-expanded="true" data-menu-button><svg width="40"
+            height="40" aria-label="Перемикач мобільного меню" aria-controls="header__mobile">
+            <use class="header__icon-cross" href="./images/sprites.svg#icon-cross"></use>
+            <use class="header__icon-menu" href="./images/sprites.svg#icon-menu"></use>
+          </svg></button>
+        <div class="header__mobile" id="header__mobile" data-menu>Mobile menue</div>
+        <!-- <ul class="header__menu">
           <li class="header__menu-item"><a href="./index.html"
               class="header__menu-link header__menu-link--current">Студия</a>
           </li>
           <li class="header__menu-item"><a href="./portfolio.html" class="header__menu-link">Портфолио</a></li>
           <li class="header__menu-item"><a href="" class="header__menu-link">Контакты</a></li>
-        </ul>
+        </ul> -->
       </nav>
-      <ul class="header__contacts">
+      <!-- <ul class="header__contacts">
         <li class="header__contacts-item">
           <a href="mailto:info@devstudio.com" class="header__contacts-link"><svg class="header__contacts-icon"
               width="16" height="12">
@@ -45,8 +51,8 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
-    </div>
-  </header> -->
+    </div> -->
+  </header>
   <main>
     <!-- Герой -->
     <section class="hero section">
@@ -333,7 +339,7 @@
       <button class="modal__btn-modal" data-modal-close><svg class="modal__icon-close">
           <use href="./images/sprites.svg#icon-close"></use>
         </svg></button>
-      <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+      <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
       <form class="modal__form">
         <label class="modal__user-contacts">Имя<svg class="modal__icon">
             <use href="./images/sprites.svg#icon-person"></use>
@@ -346,16 +352,16 @@
           </svg><input type="email" name="email" class="modal__input" /></label>
         <label class="modal__user-contacts">Комментарий<textarea name="text" placeholder="Введите текст"
             class="modal__textarea"></textarea></label>
-        <label class="modal__agreement"><input type="checkbox" name="agreement" value="agree"
-            class="modal__checkbox" /><svg class="modal__icon-checkbox" width="20px" height="20px">
+        <label class="modal__agreement"><input type="checkbox" name="agreement" value="agree" class="modal__checkbox"
+            required /><svg class="modal__icon-checkbox" width="20px" height="20px">
             <use href="./images/sprites.svg#icon-check"></use>
-          </svg>Соглашаюсь с рассылкой и
-          принимаю <a href="" class="modal__agreement-link">Условия
-            договора</a></label>
+          </svg>Погоджуюся з розсилкою та приймаю <a href="" class="modal__agreement-link">Умови
+            договору</a></label>
         <button type="submit" class="modal__button-submit">Отправить</button>
       </form>
     </div>
   </div>
+  <script src="./js/menu.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 
