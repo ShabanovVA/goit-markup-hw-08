@@ -7,12 +7,6 @@
         display: flex;
         position: relative;
         align-items: center;
-        // ниже пд для мобилі
-        height: 60px;
-
-@media screen and (min-width: 768px) {
-height: 80px;
-}
     }
 
 &__navigation {
@@ -23,20 +17,30 @@ height: 80px;
 
 /* Logotip header */
 .header__logo {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    margin-right: 87px;
+    padding: 16px 0;
 
     color: var(--logo-black-color);
 
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     text-decoration: none;
     letter-spacing: 0.03em;
 
     transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
+
+    @media screen and (min-width: 768px) {
+    padding: 26px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    padding: 24px 0 25px 0;
+    font-size: 26px;
+    line-height: 1.19;
+    }
 
     &:hover,
     &:focus{
@@ -66,13 +70,7 @@ height: 80px;
 
 &-link {
         display: block;
-
         position: relative;
-
-        // padding-top: 32px;
-        // padding-bottom: 32px;
-
-        color: var(--title-text-color);
 
         font-weight: 500;
         font-size: 40px;
@@ -80,6 +78,7 @@ height: 80px;
         letter-spacing: 0.02em;
         text-decoration: none;
 
+        color: var(--title-text-color);
         transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
     
     @media screen and (min-width: 768px) {
@@ -119,7 +118,11 @@ height: 80px;
 
     &-item:not(:last-child) {
         padding-bottom: 32px;
-        }
+
+@media screen and (min-width: 768px) {
+        padding-bottom: 0;
+    }
+}
 }
 
 /* Contacts */
@@ -127,8 +130,15 @@ height: 80px;
 .header__contacts {
     display: flex;
     flex-direction: column-reverse;
-    margin-left: auto;
-    // gap: 30px; 
+    
+    @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-left: 81px;
+    }
+
+    @media screen and (min-width: 1200px) {
+    gap: 30px;
+}
 }
 
 .header__contacts-mail,
@@ -163,12 +173,28 @@ height: 80px;
 @media screen and (min-width: 390px) {
     font-size: 34px;
 }
+
+    @media screen and (min-width: 768px) {
+    margin-top: 0;
+    padding-bottom: 21px;
+    font-size: 12px;
+    line-height: 1.17;
+
+    color: var(--primary-text-color);
+}
 }
 
 .header__contacts-mail{
     font-size: 24px;
     line-height: 1.17;
-    margin-bottom: 64px;
+    padding-bottom: 64px;
+
+    @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+    }
 }
 
 .header__contacts-icon {
@@ -180,6 +206,9 @@ height: 80px;
 
     transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
 
+@media screen and (min-width: 768px) {
+    display: block;
+    }
 &:hover,
 &:focus {
     fill: currentColor;
@@ -188,7 +217,7 @@ height: 80px;
 
 // Header-mobile-menu
 
-.header__mobile-menu {
+.header__mobile-button {
     display: inline-flex;
     position: absolute;
     top: 10px;
@@ -206,7 +235,7 @@ height: 80px;
 }
 }
 
-.header__mobile-menu:hover{
+.header__mobile-button:hover{
     fill: var(--accent-color);
 }
 
@@ -214,35 +243,41 @@ height: 80px;
     display: none;
 }
 
-.header__mobile-menu.is-open .header__icon-cross {
+.header__mobile-button.is-open .header__icon-cross {
     display: block;
 }
 
-.header__mobile-menu.is-open .header__icon-menu {
+.header__mobile-button.is-open .header__icon-menu {
     display: none;
 }
 
-.header__mobile{
+.header__mobile-menu{
+    display: flex;
+    @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 796px;
-
+    
     padding: 48px 0 48px 40px;
     background-color: var(--main-white-color);
     z-index: 1;
-
+}
 }
 
-.header__mobile.is-open{
+.header__mobile-menu.is-open{
     display: block;
 }
 
 .header__socials {
     display: flex;
     flex-wrap: wrap;
+
+@media screen and (min-width: 768px) {
+    display: none;
+}
 }
 
 .header__socials-link {
@@ -275,5 +310,9 @@ height: 80px;
 
     @media screen and (min-width: 390px) {
     margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    display: none;
 }
 }
