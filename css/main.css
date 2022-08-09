@@ -308,7 +308,7 @@ img {
 }
 
 .header__mobile-menu {
-  display: flex;
+  display: inline-flex;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -352,11 +352,6 @@ img {
   padding: 48px 0 48px 40px;
   background-color: var(--main-white-color);
   z-index: 1;
-}
-@media screen and (min-width: 768px) {
-  .header__mobile {
-    display: block;
-  }
 }
 
 .header__mobile.is-open {
