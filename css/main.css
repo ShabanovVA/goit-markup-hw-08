@@ -2,8 +2,8 @@
   --primary-transition-time: 250ms;
   --primary-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --hero-background-gradient: linear-gradient(to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4));
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4));
   --primary-text-color: #757575;
   --border-header-color: #ececec;
   --logo-black-color: #000000;
@@ -114,8 +114,7 @@ img {
 }
 
 .button {
-  color: var(--title-text-color--);
-  background-color: var(--main-white-color);
+  display: inline-block;
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
@@ -125,16 +124,17 @@ img {
   text-align: center;
   border-radius: 4px;
   border: 1px solid transparent;
-  display: inline-block;
+  color: var(--title-text-color--);
+  background-color: var(--main-white-color);
 }
 
 .section-title {
-  color: var(--title-text-color);
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
 @media screen and (min-width: 1200px) {
   .section-title {
@@ -174,7 +174,6 @@ img {
 .header__logo {
   margin-right: 87px;
   padding: 16px 0;
-  color: var(--logo-black-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -182,6 +181,7 @@ img {
   text-decoration: none;
   letter-spacing: 0.03em;
   transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
+  color: var(--logo-black-color);
 }
 @media screen and (min-width: 768px) {
   .header__logo {
@@ -277,18 +277,21 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .header__contacts {
+    display: flex;
+    flex-direction: row;
     gap: 30px;
+    margin-left: 315px;
   }
 }
 
 .header__contacts-mail,
 .header__contacts-tel {
   display: flex;
-  color: var(--primary-text-color);
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
   align-items: center;
+  color: var(--primary-text-color);
   transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 .header__contacts-mail:hover, .header__contacts-mail:focus,
@@ -318,6 +321,13 @@ img {
     color: var(--primary-text-color);
   }
 }
+@media screen and (min-width: 1200px) {
+  .header__contacts-tel {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
 
 .header__contacts-mail {
   font-size: 24px;
@@ -330,6 +340,13 @@ img {
     padding-bottom: 0;
     margin-bottom: 10px;
     font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-mail {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -367,10 +384,9 @@ img {
   .header__mobile-button {
     display: none;
   }
-}
-
-.header__mobile-button:hover {
-  fill: var(--accent-color);
+  .header__mobile-button:hover {
+    fill: var(--accent-color);
+  }
 }
 
 .header__icon-cross {
@@ -397,13 +413,18 @@ img {
     width: 100%;
     height: 796px;
     padding: 48px 0 48px 40px;
+    transition: opacity 2500ms var(--primary-cubic-bezier);
     background-color: var(--main-white-color);
     z-index: 1;
   }
+  .header__mobile-menu.is-open {
+    display: block;
+  }
 }
-
-.header__mobile-menu.is-open {
-  display: block;
+@media screen and (max-width: 767px) and (min-width: 768px) {
+  .header__mobile-menu.is-open {
+    display: flex;
+  }
 }
 
 .header__socials {
@@ -415,7 +436,6 @@ img {
     display: none;
   }
 }
-
 .header__socials-link {
   display: inline;
   padding: 10px 0;
@@ -432,11 +452,9 @@ img {
     line-height: 1.22;
   }
 }
-
 .header__socials-item:not(:first-child) {
   margin-left: 10px;
 }
-
 .header__socials-item:not(:last-child):after {
   content: "";
   border-left: 1px solid var(--modal-border-color);
@@ -591,6 +609,9 @@ img {
 .specialism__text {
   display: flex;
   position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -599,9 +620,6 @@ img {
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 70px;
-  bottom: 0px;
   color: var(--main-white-color);
   background-color: var(--specialism-text-bgc);
 }
@@ -1158,12 +1176,13 @@ img {
 
 .footer__link {
   display: block;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
   text-decoration: none;
-  margin-bottom: 20px;
   color: var(--main-white-color);
   transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
 }

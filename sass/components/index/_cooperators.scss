@@ -1,86 +1,81 @@
 .cooperators {
-    background-color: var(--cooperators-bgc);
+background-color: var(--cooperators-bgc);
     
-    &__title {
-            margin-bottom: 30px;
+&__title {
+    margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px) {
-            margin-bottom: 50px;
-        }
-        }
+@media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+}
+}
     
-        &__list {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+&__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
     
-        &__item {
-            width: 100%;
-            background-color: var(--main-white-color);
-            box-shadow: var(--cooperators-card-shadow);
-            border-radius: 0px 0px 4px 4px;
+&__item {
+    width: 100%;
+    background-color: var(--main-white-color);
+    box-shadow: var(--cooperators-card-shadow);
+    border-radius: 0px 0px 4px 4px;
 
-        @media screen and (min-width: 768px) {
-            width: calc((100% - 30px) / 2);
-        }
+@media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+}
 
-        @media screen and (min-width: 1200px) {
-            width: calc((100% - 90px) / 4);
-        }
-        }
+@media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+}
+}
     
-        &__card {
-            padding: 30px 0 24px 0;
-            text-align: center;
+&__card {
+    padding: 30px 0 24px 0;
+    text-align: center;
 
-        @media screen and (min-width: 1200px) {
-            padding: 30px 32px;        }
+@media screen and (min-width: 1200px) {
+    padding: 30px 32px;        }
+}
+    
+&__name {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+    
+&__post {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
         }
     
-        &__name {
-            color: var(--title-text-color);
+&__networks {
+    display: inline-flex;
+    gap: 10px;
+}
     
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 1.19;
-            letter-spacing: 0.03em;
-            margin-bottom: 10px;
-        }
+&__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cooperators-icon-bgc);
+    fill: var(--cooperators-icon-fill);
+    transition: fill var(--primary-transition-time) var(--primary-cubic-bezier),
+    background-color var(--primary-transition-time) var(--primary-cubic-bezier);
+}
     
-        &__post {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.9;
-            letter-spacing: 0.03em;
-            margin-bottom: 16px;
-        }
-    
-        &__networks {
-            // display: flex;
-            display: inline-flex;
-            gap: 10px;
-        }
-    
-        &__link {
-            display: flex;
-    
-            width: 44px;
-            height: 44px;
-            border-radius: 44px;
-            align-items: center;
-            justify-content: center;
-    
-            background-color: var(--cooperators-icon-bgc);
-            fill: var(--cooperators-icon-fill);
-    
-            transition: fill var(--primary-transition-time) var(--primary-cubic-bezier),
-                background-color var(--primary-transition-time) var(--primary-cubic-bezier);
-        }
-    
-        &__link:hover,
-        &__link:focus {
-            background-color: var(--cooperators-icon-bgc-hover);
-            fill: var(--cooperators-icon-fill-hover);
-        }
+&__link:hover,
+&__link:focus {
+    background-color: var(--cooperators-icon-bgc-hover);
+    fill: var(--cooperators-icon-fill-hover);
+}
 }
