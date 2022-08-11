@@ -162,7 +162,6 @@ img {
 }
 .header__container {
   display: flex;
-  position: relative;
   align-items: center;
 }
 .header__navigation {
@@ -268,10 +267,12 @@ img {
 .header__contacts {
   display: flex;
   flex-direction: column-reverse;
+  margin-top: 302px;
 }
 @media screen and (min-width: 768px) {
   .header__contacts {
     display: inline-block;
+    margin-top: 0;
     margin-left: 81px;
   }
 }
@@ -303,11 +304,11 @@ img {
 .header__contacts-tel {
   font-size: 28px;
   line-height: 1.18;
-  margin-top: 302px;
+  text-align: end;
   padding-bottom: 32px;
   color: var(--accent-color);
 }
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 423px) {
   .header__contacts-tel {
     font-size: 34px;
   }
@@ -378,7 +379,7 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 2;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .header__mobile-button {
@@ -411,11 +412,10 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 796px;
-    padding: 48px 0 48px 40px;
-    transition: opacity 2500ms var(--primary-cubic-bezier);
+    height: 100%;
+    padding: 48px 83px 48px 40px;
+    overflow-y: scroll;
     background-color: var(--main-white-color);
-    z-index: 1;
   }
   .header__mobile-menu.is-open {
     display: block;
@@ -445,7 +445,7 @@ img {
   line-height: 1.18;
   color: var(--accent-color);
 }
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 470px) {
   .header__socials-link {
     font-weight: 500;
     font-size: 18px;
@@ -461,7 +461,7 @@ img {
   margin-left: 5px;
   color: var(--modal-border-color);
 }
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 470px) {
   .header__socials-item:not(:last-child):after {
     margin-left: 10px;
   }
@@ -746,6 +746,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   background-color: var(--backdrop-bgc);
   transition: opacity var(--primary-transition-time) var(--primary-cubic-bezier);
 }
@@ -758,9 +759,11 @@ img {
   position: absolute;
   width: calc(100% - 30px);
   max-width: 450px;
+  height: 609px;
   top: 50%;
   left: 50%;
   padding: 40px;
+  overflow-y: scroll;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--primary-transition-time) var(--primary-cubic-bezier);
   border-radius: 4px;
@@ -770,6 +773,7 @@ img {
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
+    height: 581px;
   }
 }
 .backdrop.is-hidden .modal {
