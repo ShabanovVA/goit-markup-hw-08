@@ -380,14 +380,18 @@ img {
   border: none;
   background-color: transparent;
   z-index: 1;
+  fill: currentColor;
+  transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
 }
 @media screen and (min-width: 768px) {
   .header__mobile-button {
     display: none;
   }
-  .header__mobile-button:hover {
-    fill: var(--accent-color);
-  }
+}
+
+.header__mobile-button:hover,
+.header__mobile-button:focus {
+  fill: var(--accent-color);
 }
 
 .header__icon-cross {
@@ -408,7 +412,7 @@ img {
 @media screen and (max-width: 767px) {
   .header__mobile-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
