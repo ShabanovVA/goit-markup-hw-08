@@ -190,6 +190,10 @@
     display: block;
 }
 
+@media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+}
+
 &:focus {
     border-color: var(--accent-color);
 }
