@@ -29,10 +29,17 @@
     text-align: start;
 }
 }
-    
+
+&__logo {
+    margin-bottom: 60px;
+
+@media screen and (min-width: 768px) {
+    margin-bottom: 0;
+}
+}
+
 &__address-list {
     display: block;
-    margin-bottom: 60px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -40,10 +47,6 @@
     letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--main-white-color);
-
-@media screen and (min-width: 768px) {
-    margin-bottom: 0;
-}
 }
 }
 

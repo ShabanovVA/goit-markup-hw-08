@@ -267,7 +267,6 @@
     display: flex;
 
 @media screen and (max-width: 767px) {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -275,16 +274,14 @@
     height: 100%;
     padding: 48px 83px 48px 40px;
     overflow-y: scroll;
+    flex-direction: column;
     background-color: var(--main-white-color);
-
-    transform: translateY(100%);
-    transition: transform 2500ms linear;
+    transform: translateX(-100%);
+    transition: transform var(--primary-transition-time) var(--primary-cubic-bezier);
     
 
 &.is-open {
-    display: flex;
-    flex-direction: column;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 }
 }
@@ -300,7 +297,6 @@
 
 &-link {
     display: inline;
-    // padding: 10px 0;
     text-decoration: none;
     font-weight: 500;
     font-size: 18px;

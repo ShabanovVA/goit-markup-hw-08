@@ -420,7 +420,6 @@ img {
 }
 @media screen and (max-width: 767px) {
   .header__mobile-menu {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -428,14 +427,13 @@ img {
     height: 100%;
     padding: 48px 83px 48px 40px;
     overflow-y: scroll;
+    flex-direction: column;
     background-color: var(--main-white-color);
-    transform: translateY(100%);
-    transition: transform 2500ms linear;
+    transform: translateX(-100%);
+    transition: transform var(--primary-transition-time) var(--primary-cubic-bezier);
   }
   .header__mobile-menu.is-open {
-    display: flex;
-    flex-direction: column;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -762,9 +760,15 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   z-index: 1;
   background-color: var(--backdrop-bgc);
   transition: opacity var(--primary-transition-time) var(--primary-cubic-bezier);
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 0;
+  }
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -1087,11 +1091,6 @@ img {
   border-style: solid;
   border-color: var(--border-works-color);
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .portfolio__card-description {
-    padding: 20px 24px 56px 24px;
-  }
-}
 .portfolio__card-title {
   margin-bottom: 4px;
   font-weight: 700;
@@ -1117,6 +1116,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1176,9 +1176,16 @@ img {
     text-align: start;
   }
 }
+.footer__logo {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    margin-bottom: 0;
+  }
+}
 .footer__address-list {
   display: block;
-  margin-bottom: 60px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1186,11 +1193,6 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--main-white-color);
-}
-@media screen and (min-width: 768px) {
-  .footer__address-list {
-    margin-bottom: 0;
-  }
 }
 
 .footer__link {
