@@ -107,10 +107,10 @@
 }
 
 &-item:not(:last-child) {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 
 @media screen and (min-width: 768px) {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 }
 }
@@ -161,15 +161,11 @@
 }
 
 .header__contacts-tel{
-    font-size: 28px;
+    font-size: 34px;
     line-height: 1.18;
     text-align: end;
     padding-bottom: 32px;
     color: var(--accent-color);
-
-@media screen and (min-width: 423px) {
-    font-size: 34px;
-}
 
 @media screen and (min-width: 768px) {
     margin-top: 0;
@@ -235,7 +231,7 @@
     border: none;
     background-color: transparent;
     z-index: 1;
-    fill: currentColor;
+    fill: var(--title-text-color);
     transition: fill var(--primary-transition-time) var(--primary-cubic-bezier);
 
 @media screen and (min-width: 768px) {
@@ -247,6 +243,7 @@
 .header__mobile-button:focus{
     fill: var(--accent-color);
 }
+
 .header__icon-cross {
     display: none;
 }
@@ -261,7 +258,7 @@
 
 .header__mobile-menu{
     display: flex;
-    
+
 @media screen and (max-width: 767px) {
     display: none;
     position: fixed;
@@ -273,8 +270,13 @@
     overflow-y: scroll;
     background-color: var(--main-white-color);
 
+    transform: translateY(100%);
+    transition: transform 2500ms linear;
+    
+
 &.is-open {
     display: block;
+    transform: translateY(0);
 
 @media screen and (min-width: 768px) {
     display: flex;
@@ -286,6 +288,7 @@
 .header__socials {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 
 @media screen and (min-width: 768px) {
     display: none;
@@ -296,30 +299,16 @@
     padding: 10px 0;
     text-decoration: none;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 1.18;
-    color: var(--accent-color);
-
-@media screen and (min-width: 470px) {
-    font-weight: 500;
     font-size: 18px;
     line-height: 1.22;
-}
-}
-
-&-item:not(:first-child) {
-    margin-left: 10px;
+    color: var(--accent-color);
 }
 
 &-item:not(:last-child):after {
     content: "";
     border-left: 1px solid var(--modal-border-color);
-    margin-left: 5px;
-    color: var(--modal-border-color);
-
-@media screen and (min-width: 470px) {
     margin-left: 10px;
-}
+    color: var(--modal-border-color);
 
 @media screen and (min-width: 768px) {
     display: none;
