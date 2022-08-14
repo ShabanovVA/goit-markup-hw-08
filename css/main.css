@@ -1201,7 +1201,7 @@ img {
   text-decoration: none;
   color: var(--main-white-color);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__address-list {
     margin-bottom: 0;
   }
@@ -1241,18 +1241,15 @@ img {
 
 .footer__networks {
   height: 80px;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer__networks {
     margin-left: 165px;
-    margin-bottom: 102px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__networks {
     margin-left: 70px;
-    margin-bottom: 0;
   }
 }
 .footer__networks-title {
@@ -1285,9 +1282,13 @@ img {
   background-color: var(--accent-color);
 }
 
+.footer__subscribe {
+  margin-top: 60px;
+}
 @media screen and (min-width: 1200px) {
   .footer__subscribe {
     margin-left: auto;
+    margin-top: 0;
   }
 }
 .footer__subscribe-icon {
