@@ -94,15 +94,15 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                                          ./images/webphoto-desktop1x.jpg 370w,
-                                          ./images/webphoto-desktop2x.jpg 740w,
-                                          ./images/webphoto-tablet1x.jpg 354w,
-                                          ./images/webphoto-tablet2x.jpg 708w,
-                                          ./images/webphoto-mobile1x.jpg 450w,
-                                          ./images/webphoto-mobile2x.jpg 900w" src="./images/webphoto-mobile1x.jpg"
-                  alt="Открытый веб-сайт на ноутбуке"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/webphoto-desktop1x.jpg 1x, ./images/webphoto-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/webphoto-tablet1x.jpg 1x, ./images/webphoto-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/webphoto-mobile1x.jpg 1x, ./images/webphoto-mobile2x.jpg 2x"
+                    type="image/jpeg" />
+                  <img src="./images/webphoto-mobile1x.jpg" alt="Открытый веб-сайт на ноутбуке" />
+                </picture>
                 <p class="portfolio__card-text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                   відвідувачу отримати
@@ -118,14 +118,14 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/poster-desktop1x.jpg 370w,
-                  ./images/poster-desktop2x.jpg 740w,
-                  ./images/poster-tablet1x.jpg 354w,
-                  ./images/poster-tablet2x.jpg 708w,
-                  ./images/poster-mobile1x.jpg 450w,
-                  ./images/poster-mobile2x.jpg 900w" src="./images/poster-mobile1x.jpg" alt="Постер два баскетболиста"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/poster-desktop1x.jpg 1x, ./images/poster-desktop2x.jpg 2x,"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/poster-tablet1x.jpg 1x, ./images/poster-tablet2x.jpg 2x,"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/poster-mobile1x.jpg 1x,./images/poster-mobile2x.jpg 2x" type="image/jpeg" />
+                  <img src="./images/poster-mobile1x.jpg" alt="Постер два баскетболиста" />
+                </picture>
                 <p class="portfolio__card-text">
                   Текст второй карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати
@@ -142,14 +142,15 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/seafood-desktop1x.jpg 370w,
-                  ./images/seafood-desktop2x.jpg 740w,
-                  ./images/seafood-tablet1x.jpg 354w,
-                  ./images/seafood-tablet2x.jpg 708w,
-                  ./images/seafood-mobile1x.jpg 450w,
-                  ./images/seafood-mobile2x.jpg 900w" src="./images/seafood-mobile1x.jpg" alt="Логотип ресторана"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/seafood-desktop1x.jpg 1x, ./images/seafood-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/seafood-tablet1x.jpg 1x, ./images/seafood-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/seafood-mobile1x.jpg 1x, ./images/seafood-mobile2x.jpg 2x"
+                    type="image/jpeg" />
+                  <img src="./images/seafood-mobile1x.jpg" alt="Логотип ресторана" />
+                </picture>
                 <p class="portfolio__card-text">
                   Текст третьей карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати
@@ -165,14 +166,15 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/earphon-desktop1x.jpg 370w,
-                  ./images/earphon-desktop2x.jpg 740w,
-                  ./images/earphon-tablet1x.jpg 354w,
-                  ./images/earphon-tablet2x.jpg 708w,
-                  ./images/earphon-mobile1x.jpg 450w,
-                  ./images/earphon-mobile2x.jpg 900w" src="./images/earphon-mobile1x.jpg" alt="Наушники"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/earphon-desktop1x.jpg 1x, ./images/earphon-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/earphon-tablet1x.jpg 1x, ./images/earphon-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/earphon-mobile1x.jpg 1x, ./images/earphon-mobile2x.jpg 2x"
+                    type="image/jpeg" />
+                  <img src="./images/earphon-mobile1x.jpg" alt="Наушники" />
+                </picture>
                 <p class="portfolio__card-text">
                   Текст четвертой карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
@@ -188,15 +190,15 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/boxs-desktop1x.jpg 370w,
-                  ./images/boxs-desktop2x.jpg 740w,
-                  ./images/boxs-tablet1x.jpg 354w,
-                  ./images/boxs-tablet2x.jpg 708w,
-                  ./images/boxs-mobile1x.jpg 450w,
-                  ./images/boxs-mobile2x.jpg 900w" src="./images/boxs-mobile1x.jpg" alt="Две коробки"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
-                <p class="portfolio__card-text">
+                <picture>
+                  <source srcset="./images/boxs-desktop1x.jpg 1x, ./images/boxs-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/boxs-tablet1x.jpg 1x, ./images/boxs-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/boxs-mobile1x.jpg 1x, ./images/boxs-mobile2x.jpg 2x" type="image/jpeg" />
+                  <img src="./images/boxs-mobile1x.jpg" alt="Две коробки" />
+                </picture>
+                <p class=" portfolio__card-text">
                   Текст пятой карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.
@@ -211,15 +213,15 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/monitor-desktop1x.jpg 370w,
-                  ./images/monitor-desktop2x.jpg 740w,
-                  ./images/monitor-tablet1x.jpg 354w,
-                  ./images/monitor-tablet2x.jpg 708w,
-                  ./images/monitor-mobile1x.jpg 450w,
-                  ./images/monitor-mobile2x.jpg 900w" src="./images/monitor-mobile1x.jpg"
-                  alt="Открытый веб-сайт на мониторе"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/monitor-desktop1x.jpg 1x, ./images/monitor-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/monitor-tablet1x.jpg 1x, ./images/monitor-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/monitor-mobile1x.jpg 1x, ./images/monitor-mobile2x.jpg 2x"
+                    type="image/jpeg" />
+                  <img src="./images/monitor-mobile1x.jpg" alt="Открытый веб-сайт на мониторе" />
+                </picture>
                 <p class="portfolio__card-text">
                   Текст шестой карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати
@@ -235,14 +237,14 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/book-desktop1x.jpg 370w,
-                  ./images/book-desktop2x.jpg 740w,
-                  ./images/book-tablet1x.jpg 354w,
-                  ./images/book-tablet2x.jpg 708w,
-                  ./images/book-mobile1x.jpg 450w,
-                  ./images/book-mobile2x.jpg 900w" src="./images/book-mobile1x.jpg" alt="Открытая книга"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/book-desktop1x.jpg 1x, ./images/book-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/book-tablet1x.jpg 1x, ./images/book-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/book-mobile1x.jpg 1x, ./images/book-mobile2x.jpg 2x" type="image/jpeg" />
+                  <img src="./images/book-mobile1x.jpg" alt="Открытая книга" />
+                </picture>
                 <p class="portfolio__card-text">
                   Текст седьмой карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати
@@ -258,14 +260,14 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/leib-desktop1x.jpg 370w,
-                  ./images/leib-desktop2x.jpg 740w,
-                  ./images/leib-tablet1x.jpg 354w,
-                  ./images/leib-tablet2x.jpg 708w,
-                  ./images/leib-mobile1x.jpg 450w,
-                  ./images/leib-mobile2x.jpg 900w" src="./images/leib-mobile1x.jpg" alt="Бирка"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/leib-desktop1x.jpg 1x, ./images/leib-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/leib-tablet1x.jpg 1x, ./images/leib-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/leib-mobile1x.jpg 1x, ./images/leib-mobile2x.jpg 2x" type="image/jpeg" />
+                  <img src="./images/leib-mobile1x.jpg" alt="Бирка" />
+                </picture>
                 <p class="portfolio__card-text">
                   Текст восьмой карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати
@@ -281,15 +283,15 @@
           <li class="portfolio__works-item">
             <a href="#" class="portfolio__link-card">
               <div class="portfolio__card-overlate">
-                <img srcset="
-                  ./images/netbook-desktop1x.jpg 370w,
-                  ./images/netbook-desktop2x.jpg 740w,
-                  ./images/netbook-tablet1x.jpg 354w,
-                  ./images/netbook-tablet2x.jpg 708w,
-                  ./images/netbook-mobile1x.jpg 450w,
-                  ./images/netbook-mobile2x.jpg 900w" src="./images/netbook-mobile1x.jpg"
-                  alt="Открытое приложение на нетбуке"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px" />
+                <picture>
+                  <source srcset="./images/netbook-desktop1x.jpg 1x, ./images/netbook-desktop2x.jpg 2x"
+                    media="(min-width: 1200px)" type="image/jpeg" />
+                  <source srcset="./images/netbook-tablet1x.jpg 1x, ./images/netbook-tablet2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg" />
+                  <source srcset="./images/netbook-mobile1x.jpg 1x, ./images/netbook-mobile2x.jpg 2x"
+                    type="image/jpeg" />
+                  <img src="./images/netbook-mobile1x.jpg" alt="Открытое приложение на нетбуке" />
+                </picture>
                 <p class="portfolio__card-text">
                   Текст девятой карточки.Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати
