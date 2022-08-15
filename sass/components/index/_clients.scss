@@ -4,10 +4,8 @@
 }
 
 &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+@include gap30;
+justify-content: center;
 }
 
 &__item {

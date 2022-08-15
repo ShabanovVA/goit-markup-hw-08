@@ -10,9 +10,11 @@ background-color: var(--cooperators-bgc);
 }
     
 &__list {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: block;
+
+@media screen and (min-width: 768px) {
+    @include gap30;
+}
 }
     
 &__item {
@@ -27,6 +29,14 @@ background-color: var(--cooperators-bgc);
 
 @media screen and (min-width: 1200px) {
     width: calc((100% - 90px) / 4);
+}
+}
+
+&__item:not(:last-child){
+    margin-bottom: 30px;
+
+@media screen and (min-width: 768px) {
+    margin-bottom: 0;
 }
 }
     
