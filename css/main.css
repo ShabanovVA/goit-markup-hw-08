@@ -1112,7 +1112,6 @@ img {
   box-shadow: var(--portfolio-card-hover-shadow);
 }
 .portfolio__card-description {
-  display: block;
   padding: 20px 24px;
   flex-grow: 1;
   border-width: 0 1px 1px;
