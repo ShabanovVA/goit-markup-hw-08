@@ -40,11 +40,8 @@
 
 &__address-list {
     display: block;
+    @include font(400, 14, 1.71, 0.03);
     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--main-white-color);
 }
@@ -55,9 +52,7 @@
     margin-bottom: 20px;
     margin-bottom: 20px;
     font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.17;
+    @include font(700, 24, 1.17, 0.03);
     text-decoration: none;
     color: var(--main-white-color);
     transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
@@ -99,10 +94,7 @@
 
 &-title {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(700, 14, 1.14, 0.03);
     text-transform: uppercase;
     color: var(--main-white-color);
 }
@@ -156,10 +148,7 @@
 
 &-label {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(700, 14, 1.14, 0.03);
     text-transform: uppercase;
     color: var(--main-white-color);
 }
@@ -171,11 +160,8 @@
     max-width: 358px;
     padding: 14px 16px 14px 16px;
     margin-bottom: 20px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
+    @include font(400, 16, 1.25, 0.03);
     align-items: center;
-    letter-spacing: 0.03em;
     outline: none;
     border-color: var(--footer-input-border-color);
     filter: var(--footer-input-border-shadow);
@@ -204,10 +190,7 @@
 .footer__subscribe-button {
     display: inline-flex;
     padding: 9px 28px 9px 29px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font(700, 16, 1.88, 0.06);
     align-items: center;
     border-radius: 4px;
     border: 1px solid transparent;

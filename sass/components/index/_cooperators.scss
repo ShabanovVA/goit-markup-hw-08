@@ -49,21 +49,15 @@ background-color: var(--cooperators-bgc);
 }
     
 &__name {
-    color: var(--title-text-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
     margin-bottom: 10px;
+    @include font(500, 16, 1.19, 0.03);
+    color: var(--title-text-color);
 }
     
 &__post {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.03em;
     margin-bottom: 16px;
-        }
+    @include font(400, 16, 1.9, 0.03);
+}
     
 &__networks {
     display: inline-flex;

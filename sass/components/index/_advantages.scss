@@ -30,16 +30,11 @@
 }
 
 &__title {
-    color: var(--title-text-color);
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-
     margin-bottom: 10px;
+    @include font(700, 14, 1.14, 0.03);
     text-align: center;
+    text-transform: uppercase;
+    color: var(--title-text-color);
 
 @media screen and (min-width: 768px) {
     text-align: start;
@@ -47,9 +42,6 @@
 }
 
 &__description {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(400, 14, 1.71, 0.03);
 }
 }

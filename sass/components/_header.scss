@@ -26,11 +26,8 @@
     margin-right: 87px;
     padding: 16px 0;
     font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.17;
+    @include font(700, 24, 1.17, 0.03);
     text-decoration: none;
-    letter-spacing: 0.03em;
     transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
     color: var(--logo-black-color);
 
@@ -41,8 +38,7 @@
 @media screen and (min-width: 1200px) {
     margin-right: 93px;
     padding: 24px 0 25px 0;
-    font-size: 26px;
-    line-height: 1.19;
+    @include font(null, 26, 1.19, null);
 }
 
 &:hover,
@@ -73,18 +69,14 @@
 &-link {
     display: block;
     position: relative;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
+    @include font(500, 40, 1.18, 0.02);
     text-decoration: none;
     color: var(--title-text-color);
     transition: color var(--primary-transition-time) var(--primary-cubic-bezier);
     
 @media screen and (min-width: 768px) {
     padding: 32px 0;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(null, 14, 1.14, null);
 }
 }
 
@@ -300,9 +292,7 @@
 &-link {
     display: inline;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
+    @include font(500, 18, 1.22, 0.02);
     color: var(--accent-color);
 }
 
