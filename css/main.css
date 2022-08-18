@@ -155,6 +155,10 @@ img {
   overflow: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .header {
   border-bottom-width: 1px;
   border-bottom-style: solid;
