@@ -164,10 +164,14 @@
 }
 
 .header__contacts-tel{
-    font-size: 34px;
+    font-size: 22px;
     line-height: 1.18;
     padding-bottom: 32px;
     color: var(--accent-color);
+
+@media screen and (min-width: 480px){
+    font-size: 34px;
+}
 
 @media screen and (min-width: 768px) {
     margin-top: 0;
@@ -258,6 +262,7 @@
 
 .header__mobile-menu{
     display: flex;
+    z-index: 1;
 
 @media screen and (max-width: 767.98px) {
     position: fixed;
@@ -269,7 +274,6 @@
     overflow-y: scroll;
     flex-direction: column;
     background-color: var(--main-white-color);
-    z-index: 1;
     transform: translateX(-100%);
     transition: transform var(--primary-transition-time) var(--primary-cubic-bezier);
     
